@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+$data = [
+    'lista_della_spesa' => [
+        'pane',
+        'sale',
+        'detersivo',
+        'acqua',
+        'farina',
+        'biscotti',
+        'zucchero',
+    ]
+    ];
+
+    return view('home', $data);
 });
